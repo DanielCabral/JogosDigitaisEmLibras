@@ -1,0 +1,10 @@
+goiaba
+abacaxi
+banana
+cereja
+laranja
+limao
+melancia
+melao
+morango
+uva

@@ -1,0 +1,360 @@
+html {
+	height:100%;
+ 	min-height:100%;
+}
+
+body {
+	min-height:100%;
+	margin: 0;
+	padding: 0;
+	background-color: #FFF;
+	background-image: url("imagens/fundo.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+}
+
+div {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+h1 {
+	padding: 0px 0px;
+	margin-top: 0px;
+	width: 100%;
+	text-align: center;
+	text-transform: uppercase;
+	color: #333;
+	font-family: 'Gloria Hallelujah', cursive;
+}
+
+.stickman {
+	display: none;
+	width: 100%;
+	height: auto;
+	text-align: center;
+	margin-top: 5px;
+}
+
+
+.dica{
+	display: none;
+	width: 100%;
+	height: auto;
+	text-align: center;
+	margin-top: 30px;
+}
+
+.stickman img {
+	max-width: 100%;
+	width: 250px;
+    margin-left: -1000px;
+}
+
+.dica img {
+	max-width: 100%;
+	width: 150px;
+    margin-left: 1000px;
+}
+
+@media only screen and (max-width: 768px) {
+	.stickman img {
+		width: 100px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.dica img {
+		width: 100px;
+	}
+}
+.palavra-container {
+	position: fixed;
+	bottom: 300px;
+	width: 100%;
+	height: auto;
+	text-align: center;
+	padding: 0px 5px;
+	border: 0px solid red;
+	margin-top: 100px;
+}
+
+.palavra-container .posicao-letra {
+	width: 10%;
+	max-width: 50px;
+	height: 40px;
+	border: none;
+	border-bottom: 3px solid #333;
+	background: transparent;
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+	color: #666;
+	font-family: 'Gloria Hallelujah', cursive;
+	margin-right: 7px;
+}
+
+.palavra-container .posicao-hifen,
+.palavra-container .posicao-espaco {
+	padding: 0px 5px;
+	font-weight: bold;
+	font-size: 30px;
+	color: #666;
+}
+
+.row-container {
+	float: right;
+	position: fixed;
+	display: none;
+	width: 100%;
+	bottom: 290px; 
+	padding: 10px 10px;
+}
+
+.tentativas {
+	text-transform: uppercase;
+	float: left;
+	color: #333;
+	font-family: 'Gloria Hallelujah', cursive;
+}
+
+.tentativas span {
+	font-size: 1.5em;
+}
+
+.timer {
+	text-transform: uppercase;
+	float: right;
+	color: #333;
+	font-family: 'Gloria Hallelujah', cursive;
+}
+
+.timer span {
+	font-size: 1.5em;
+}
+
+
+.dica {
+	display: none;
+	width: 300px;
+    height: auto;
+    text-align: right;
+    margin-left: auto;
+	margin-right: 50px;
+	margin-top: -330px;
+}
+.dica .texto {
+    text-align: right;
+    margin-left: auto;
+	margin-right: 70px;
+}
+
+.teclado {
+	display: none;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 250px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 20px 0px;
+	background: #111;
+	z-index: 9;
+}
+
+
+.teclado .teclado-row {
+	position: relative;
+	width: 100%;
+	max-width: 800px;
+	clear: both;
+	margin: 0 auto;
+	margin-bottom: 5px;
+}
+
+.teclado .teclado-row .teclado-button {
+	position: relative;
+	width: 9%;
+	height: 45px;
+	background: #333;
+	border: 0px solid #333;
+	cursor: pointer;
+	outline: 0;
+	border-radius: 7px;
+	transition: all 0.3s ease-in-out;
+}
+
+.teclado .teclado-row .teclado-button:hover,
+.teclado .teclado-row .teclado-button:active {
+	background: #222;
+}
+
+.teclado .teclado-row .teclado-button-inative {
+	background: #D86666;
+	color: #FFF;
+	cursor: default;
+}
+
+.teclado .teclado-row .teclado-button-inative:hover,
+.teclado .teclado-row .teclado-button-inative:active {
+	background: #D86666;
+	color: #FFF;
+}	
+
+.teclado .teclado-row .teclado-button-valid {
+	background: #4ACF6C;
+	color: #FFF;
+	cursor: default;	
+}
+
+.teclado .teclado-row .teclado-button-valid:hover,
+.teclado .teclado-row .teclado-button-valid:active {
+	background: #4ACF6C;
+	color: #FFF;
+}
+
+.btn {
+	position: relative;
+	width: 90%;
+	min-width: 200px;
+	max-width: 500px;
+	background: rgb(18,47,65);
+	color: #FFF;
+	padding: 20px 0px;
+	border: none;
+	border-radius: 5px;
+	font-size: 1.2em;
+	outline: none;
+	font-family: 'Cabin', sans-serif;
+	text-transform: uppercase;
+	transition: all 0.2s ease-in;
+	font-weight: bold;
+	-webkit-box-shadow: 0px 6px 8px -4px rgba(0,0,0,0.54);
+	-moz-box-shadow: 0px 6px 8px -4px rgba(0,0,0,0.54);
+	box-shadow: 0px 6px 8px -4px rgba(0,0,0,0.54);
+}
+
+.btn i {
+	margin-left: 10px;
+}	
+
+.btn:active,
+.btn:hover {
+	background: #666;
+	cursor: pointer;
+}
+
+.btn-container {
+		position: relative;
+	width: 100%;
+	height: auto;
+	text-align: center;
+}
+
+.jogar-novamente-container {
+		position: relative;
+	display: none;
+	width: 100%;
+	position: fixed;
+	text-align: center;
+	bottom: 20px;
+}
+
+.game-over-container {
+		position: relative;
+	display: none;
+	width: 100%;
+	position: fixed;
+	text-align: center;
+	bottom: 100px;
+}
+
+.game-over-container button {
+		position: relative;
+	background: #D86666;
+	pointer-events: none;
+    cursor: default;
+}
+
+.winner-container {
+		position: relative;
+	display: none;
+	width: 100%;
+	position: fixed;
+	text-align: center;
+	bottom: 100px;
+}
+
+.winner-container button {
+		position: relative;
+	background: #4ACF6C;
+	pointer-events: none;
+    cursor: default;
+}
+
+.voltar-container {
+	position: relative;
+	padding:5px;
+	display:block;
+	width: 10px;
+	height:10px;
+	text-align: center;
+}
+.escolha-palavra-container {
+		position: relative;
+	padding:5px;
+	width: 90%;
+	max-width: 600px;
+	height: auto;
+	margin: 0 auto;
+	text-align: center;
+}
+.voltar-container {
+	position: relative;
+	padding:5px;
+	position: fixed;
+	left:0px;
+	top:0px;
+}
+.escolha-palavra-container2 {
+		position: relative;
+		padding:5px;
+		width: 90%;
+		max-width: 600px;
+		height: auto;
+		margin: 0 auto;
+		text-align: center;
+}
+.escolha-palavra-container3 {
+	position: relative;
+	padding:5px;
+	width: 90%;
+	max-width: 600px;
+	height: auto;
+	margin: 0 auto;
+	text-align: center;
+}
+/*
+.escolha-palavra-container2 {
+	padding:5px;
+	display: none;
+	width: 90%;
+	max-width: 600px;
+	height: auto;
+	margin: 0 auto;
+	text-align: center;
+}
+.escolha-palavra-container3 {
+	padding:5px;
+	display: none;
+	width: 90%;
+	max-width: 600px;
+	height: auto;
+	margin: 0 auto;
+	text-align: center;
+}*/
+
+

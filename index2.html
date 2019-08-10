@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=1024">
+	<title>Jogo da Forca!</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Cabin|Gloria+Hallelujah" rel="stylesheet"> 
+
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+
+	<h1>Jogo da Forca</h1>
+    
+	<div class="stickman">
+		<img src="imagens/stickman1.png" id="stickman" />
+	</div>
+
+   <div class="dica" id="dica">
+       <video width="200" height="150" id="dicaimg" loop autoplay>
+	   <source id='source' ></source>
+	   </video>
+        <h2 class="texto">Dica</h2>
+	</div>
+    
+	<div id="palavra-container" class="palavra-container">
+		<!-- POSIÇÕES DA PALAVRA -->
+	</div>
+    <p> </p>
+	<div class="row-container">
+		<label class="tentativas" style="bottom: -50px;">Tentativas: <span id="tentativas">0</span></label>
+		<label class="timer">Tempo: <span id="timer">30</span></label>
+	</div>
+
+	<div class="game-over-container">
+		<button class="btn">
+			<i class="fa fa-close" aria-hidden="true"></i>
+			Game Over
+		</button>
+	</div>
+
+	<div class="winner-container">
+		<button class="btn">			
+			Parabéns
+			<i class="fa fa-trophy" aria-hidden="true"></i>
+		</button>
+	</div>
+
+	<div class="jogar-novamente-container">
+		<button class="btn" id="btn-jogar-novamente">
+			<i class="fa fa-undo" aria-hidden="true"></i>
+			Jogar Novamente
+		</button>
+	</div>
+
+	<div class="teclado" id="teclado">
+		<div class="teclado-row">
+			<button class="teclado-button" data-button-value="Q"><img src="/imagens/q.png" height="40px"></button>
+			<button class="teclado-button" data-button-value="W"><img src="/imagens/w.png" height="40px"></button>
+			<button class="teclado-button" data-button-value="E"><img src="/imagens/e.png" height="40px"></button>
+			<button class="teclado-button" data-button-value="R"><img src="/imagens/r.png" height="40px"></button>
+			<button class="teclado-button" data-button-value="T"><img src="/imagens/t.png" height="40px"></button>
+			<button class="teclado-button" data-button-value="Y"><img src="/imagens/y.png" height="40px"></button>
+			<button class="teclado-button" data-button-value="U"><img src="/imagens/u.png" height="40px"></button>
+			<button class="teclado-button" data-button-value="I"><img src="/imagens/i.png" height="40px"></button>
+			<button class="teclado-button" data-button-value="O"><img src="/imagens/o.png" height="40px"></button>
+			<button class="teclado-button" data-button-value="P"><img src="/imagens/p.png" height="40px"></button>
+		</div>
+		<div class="teclado-row">
+			<button class="teclado-button" data-button-value="A"><img src="/imagens/a.png" height="40px"></button>
+			<button class="teclado-button" data-button-value="S"><img src="/imagens/s.png" height="40px"></button>
+			<button class="teclado-button" data-button-value="D"><img src="/imagens/d.png" height="40px"></button>
+			<button class="teclado-button" data-button-value="F"><img src="/imagens/f.png" height="40px"></button>
+			<button class="teclado-button" data-button-value="G"><img src="/imagens/g.png" height="40px"></button>
+			<button class="teclado-button" data-button-value="H"><img src="/imagens/h.png" height="40px"></button>
+			<button class="teclado-button" data-button-value="J"><img src="/imagens/j.png" height="40px"></button>
+			<button class="teclado-button" data-button-value="K"><img src="/imagens/k.png" height="40px"></button>
+			<button class="teclado-button" data-button-value="L"><img src="/imagens/l.png" height="40px"></button>
+			<button class="teclado-button" data-button-value="Ç"><img src="/imagens/cc.png" height="40px"></button>
+		</div>
+		<div class="teclado-row">
+			<button class="teclado-button" data-button-value="Z"><img src="/imagens/z.png" height="40px"></button>
+			<button class="teclado-button" data-button-value="X"><img src="/imagens/x.png" height="40px"></button>
+			<button class="teclado-button" data-button-value="C"><img src="/imagens/c.png" height="40px"></button>
+			<button class="teclado-button" data-button-value="V"><img src="/imagens/v.png" height="40px"></button>
+			<button class="teclado-button" data-button-value="B"><img src="/imagens/b.png" height="40px"></button>
+			<button class="teclado-button" data-button-value="N"><img src="/imagens/n.png" height="40px"></button>
+			<button class="teclado-button" data-button-value="M"><img src="/imagens/m.png" height="40px"></button>
+		</div>
+	</div>
+	
+		<div class="voltar-container">
+
+		<div class="btn-jogar-container btn-jogar">
+			<button id="voltar" class="btn">
+				Voltar <i class="fa fa-play" aria-hidden="true"></i>
+			</button>
+		</div>
+
+	</div>
+	<div class="escolha-palavra-container">
+
+		<div class="btn-jogar-container btn-jogar">
+			<button id="btn-jogar" class="btn">
+				Animais <i class="fa fa-play" aria-hidden="true"></i>
+			</button>
+		</div>
+
+	</div>
+	
+	<div class="escolha-palavra-container2">
+		<div class="btn-jogar-container btn-jogar">
+			<button id="btn-jogar2" class="btn">
+				Cores <i class="fa fa-play" aria-hidden="true"></i>
+			</button>
+		</div>
+
+	</div>
+	<div class="escolha-palavra-container3">
+		<div class="btn-jogar-container btn-jogar">
+			<button id="btn-jogar3" class="btn">
+				Frutas <i class="fa fa-play" aria-hidden="true"></i>
+			</button>
+		</div>
+
+	</div>
+	
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

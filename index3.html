@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Jogo da Memoria</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=1024">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Permanent+Marker" >
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    <div class="voltar-container">
+        <div class="btn-jogar-container btn-jogar">
+            <button id="voltar" class="btn">
+                Voltar <i class="fa fa-play" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+    <div class="container">
+       
+        <header>
+            <h3>Jogo da Memoria</h3>
+        </header>
+
+        <section class="score-panel">
+        	<ul class="stars">
+        		<li><i class="fa fa-star"></i></li>
+        		<li><i class="fa fa-star"></i></li>
+        		<li><i class="fa fa-star"></i></li>
+        	</ul>
+
+        	<span class="moves">0</span> Movimentos
+
+            <div class="timer">
+            </div>
+
+            <div class="restart" onclick=startGame()>
+        		<i class="fa fa-repeat"></i>
+        	</div>
+        </section>
+
+		<ul class="deck" id="card-deck">
+
+         </ul>
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <h2>Parabéns</h2>
+                <a class="close" href=# ></a>
+                <div class="content-1">
+                    Parabéns, você ganhou! 
+                </div>
+                <div class="content-2">
+                    <p>Você fez <span id=finalMove> </span> movimentos </p>
+                    <p>em <span id=totalTime> </span> </p>
+                    <p>Ranking:  <span id=starRating></span></p>
+                </div>
+                <button id="play-again"onclick="playAgain()">
+                    Jogar Novamente</a>
+                </button>
+            </div>
+        </div>
+
+    </div>
+	<script>
+	(function(win, doc){
+	
+	var cont=1;
+	for(var i=1;i<3;i++){
+		for(var j=1;j<=4;j++){
+		    var li=document.createElement("li");
+			li.setAttribute('class', 'card');
+			var img=document.createElement("img");
+            img.setAttribute('src', "imagens/gif"+((cont%8)+1)+".gif");
+            img.setAttribute('id',"imagem"+cont);
+			console.log((cont%8)+1);
+			img.setAttribute('style', "display:block;");
+			li.appendChild(img);
+			var element2 = document.getElementById("card-deck");
+            element2.appendChild(li);
+            var li2=document.createElement("li");
+			li2.setAttribute('class', 'card');
+			var img2=document.createElement("img");
+            img2.setAttribute('src', "img/Img"+((cont%8)+1)+".JPG");
+            img2.setAttribute('id',"imagem"+cont);
+			console.log((cont%8)+1);
+			img2.setAttribute('style', "display:block;");
+			li2.appendChild(img2);
+			var element2 = document.getElementById("card-deck");
+			element2.appendChild(li2);
+			cont++;
+		}
+	}
+	}(window, document));
+	</script>
+    <script src="js/app.js"></script>
+</body>
+</html>

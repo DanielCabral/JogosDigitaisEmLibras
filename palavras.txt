@@ -1,0 +1,10 @@
+﻿leao
+gato
+cachorro
+cavalo
+vaca
+baleia
+dinossauro
+cobra
+abelha
+coelho
