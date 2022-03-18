@@ -141,7 +141,7 @@
 
 	// Atualiza o stickman
 	function updateStickman() {
-		imgStickman.setAttribute('src', 'imagens/forca' + tentativas + '.png');
+		imgStickman.setAttribute('src', './imagens/forca' + tentativas + '.png');
 	}
     
 	function exibirBotaoVoltar(){
