@@ -491,13 +491,13 @@
 		var palavra;
 		switch(numeroDoJogo){
 		case '1':
-		palavra= readTextFile("/palavras.txt",'1');
+		palavra= readTextFile("./palavras.txt",'1');
 		break;
 		case '2': 
-		palavra= readTextFile("/palavras2.txt",'2');
+		palavra= readTextFile("./palavras2.txt",'2');
 		break;
 		case '3':
-		palavra= readTextFile("/palavras3.txt",'3');
+		palavra= readTextFile("./palavras3.txt",'3');
 		break;
 		}
 		palavraLimpa = limpaPalavra(palavra);
